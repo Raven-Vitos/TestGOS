@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Тестирование знаний</title>
+    <link rel="icon" type="image/x-icon" href="contents/images/favicon.ico">
+
+    <link rel="stylesheet" href="styles/report.css">
+
+    <!-- Подключаем Bootstrap CSS -->
+    <link href="styles/bootstrap.min.css" rel="stylesheet">
+  </head>
+<body style="background-color: rgb(238, 238, 238);">  
+    
+    <div id="cardsContainer">
+    <h1 class="text-center mt-3">Отчет</h1>
+        <div class="card m-3"> 
+            <div class="card-body">
+                <table class="table table-dark table-striped m-0" id="table-data">
+                    <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Информация</th>
+                            <th scope="col">Колличество ошибок</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tableBody">
+                    </tbody>
+                </table>
+            </div>
+            <button type="button" class="btn btn-dark m-3" id="go-back">Вернуться назад к тестированию</button>
+            <button type="button" class="btn btn-danger m-3" onclick="clear_all_cookies()">Очистить данные об ошибках!</button>
+        </div>        
+    </div>
+    
+    <!-- Модальное окно -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+            <div class="modal-header" style="background: #e2e3e5;">
+                <h5 class="modal-title" id="exampleModalLabel">Модальное окно</h5>
+                </button>
+            </div>
+            <div class="modal-body" id="info-modal">
+                Информация в модальном окне.
+            </div>
+            <div class="modal-footer" style="background: #e2e3e5;">
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Закрыть</button>
+            </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="data/database/questions.js"></script>
+    <script src="scripts/data.js"></script>
+    <script src="scripts/cookies.js"></script>
+    <script src="scripts/script_report.js"></script>
+
+    <script src="scripts/jquery/jquery-3.5.1.slim.min.js"></script>
+    <script src="scripts/popper/popper.min.js"></script>
+    <script src="scripts/bootstrap/bootstrap.min.js"></script>
+  </body>
+</html>

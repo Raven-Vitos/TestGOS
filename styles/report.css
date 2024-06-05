@@ -1,0 +1,10 @@
+#cardsContainer {
+    width: 60%;
+    margin: auto;
+}
+
+@media only screen and (max-width: 1000px) {
+    #cardsContainer {
+        width: 100%;
+    }
+}

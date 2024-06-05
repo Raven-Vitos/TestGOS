@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Тестирование знаний</title>
+    <link rel="icon" type="image/x-icon" href="contents/images/favicon.ico">
+    <!-- Подключаем Bootstrap CSS -->
+    <link href="styles/bootstrap-5.3.3-dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="styles/main.css" rel="stylesheet">
+  </head>
+  <body class="main-app">  
+        
+    <!-- Включение модального окна НАСТРОЕК -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Настройки</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <!-- Здесь размещается содержимое модального окна -->
+            <form id="settingsForm">
+              <div class="mb-3">
+                <label for="allQInput" class="form-label">Колличество вопросов в тесте</label>
+                <input type="text" class="form-control" id="allQInput" name="all">
+                <label for="minQInput" class="form-label">Минимальнй номер вопроса (min=1)</label>
+                <input type="text" class="form-control" id="minQInput" name="min">
+                <label for="maxQInput" class="form-label">Максимальный номер вопроса (max=1001)</label>
+                <input type="text" class="form-control" id="maxQInput" name="max">
+              </div>
+              <div class="form-check mt-3 mb-3">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckResult">
+                <label class="form-check-label" for="flexCheckDefault">Показывать сразу верно/неверно</label>
+              </div>
+              <button type="submit" class="btn btn-primary">Отправить</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Включение модального окна ОЦЕНКА -->
+    <div class="modal fade" id="priceModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-body">
+            <!-- Здесь размещается содержимое модального окна -->
+            <img id="imagePrice" src="" class="img-fluid" alt="None">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <h1 class="text-center" id="main-title" style="font-weight: 600;">Тестирование знаний</h1>
+
+    <div class="container mt-3">
+      <div id="cardsContainer"></div>
+
+      <div class="card">
+        <div class="p-3 bg-info bg-opacity-10 border border-info border-start-0 border-end-0 m-3">
+          <div class="d-grid">
+            
+            <button type="button" class="btn btn-primary" onclick="showResult(this)">Завершить тестирование</button>
+            <!-- Результат тестирования -->
+            <div id="result-test" class="text-center"></div>
+            <div style="text-align: center;">
+              <button type="button" class="btn btn-info mt-3" data-bs-toggle="modal" data-bs-target="#exampleModal" style="width: 300px;">Настройки</button>
+            </div>
+          </div>        
+        </div>
+      </div>
+    </div>
+
+    
+      <div class="container mt-3">
+        <div class="card p-3" id="btn-q-car">
+          <div id="btn-questions"></div>
+        </div>
+      </div>
+    
+    <!-- Подключаем JS Bootstrap -->
+    <script src="scripts/jquery/jquery-3.6.0.min.js"></script>
+
+    <!-- Подключаем Bootstrap JS и скрипт для обработки ответов -->
+    <script src="scripts/bootstrap/bootstrap-5.3.3-dist/js/bootstrap.min.js"></script>
+
+    <script src="data/database/questions.js"></script>
+    <script src="scripts/data.js"></script>
+    <script src="scripts/cookies.js"></script>
+    <script src="scripts/script.js"></script>
+  </body>
+</html>
