@@ -5,6 +5,8 @@ let cout_q = 0
 let min_q = 0
 let max_q = 0
 
+let cur_num_btn = 0;
+
 let jsonDataFailQ = []
 
 let start_test = false
@@ -339,6 +341,7 @@ document
 
 
   function show_need_Q(num, btn) {
+    cur_num_btn = num
     const current_card = document.getElementById("cardsContainer");
 
     if (cur_q.obj) {
@@ -379,4 +382,18 @@ document
 
     const title = card.querySelector(".card-title").innerHTML
     delete answ_result[title];
+}
+
+function next_q() {
+  const list_btn = document.getElementsByClassName("btn-info");
+
+  if (cur_num_btn < list_btn.length)
+    list_btn[cur_num_btn].onclick();
+}
+
+function prev_q() {
+  const list_btn = document.getElementsByClassName("btn-info");
+
+  if (cur_num_btn - 1 > 0)
+    list_btn[cur_num_btn-1].onclick(); 
 }
