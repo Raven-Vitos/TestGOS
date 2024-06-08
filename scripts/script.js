@@ -385,14 +385,14 @@ document
 }
 
 function next_q() {
-  const list_btn = document.getElementsByClassName("btn-info");
+  const list_btn = document.getElementsByClassName("btn-sm");
 
   if (cur_num_btn < list_btn.length)
     list_btn[cur_num_btn].onclick();
 }
 
 function prev_q() {
-  const list_btn = document.getElementsByClassName("btn-info");
+  const list_btn = document.getElementsByClassName("btn-sm");
 
   if (cur_num_btn - 1 > 0)
     list_btn[cur_num_btn-1].onclick(); 
