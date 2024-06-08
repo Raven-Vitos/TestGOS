@@ -394,6 +394,6 @@ function next_q() {
 function prev_q() {
   const list_btn = document.getElementsByClassName("btn-sm");
 
-  if (cur_num_btn - 1 > 0)
-    list_btn[cur_num_btn-1].onclick(); 
+  if (cur_num_btn - 2 >= 0)
+    list_btn[cur_num_btn-2].onclick(); 
 }
